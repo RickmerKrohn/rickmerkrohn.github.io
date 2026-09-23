@@ -1,0 +1,10 @@
+title: Rickmer Krohn
+description: PhD researcher in multisensory reinforcement learning, PEARL Lab, TU Darmstadt.
+url: "https://rickmerkrohn.github.io"
+baseurl: ""
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor
