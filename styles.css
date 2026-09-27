@@ -226,7 +226,7 @@ h2 {
   display: grid;
   grid-template-columns: 128px minmax(0, 1fr);
   gap: 1.1rem;
-  align-items: center;
+  align-items: start;
   border: 1px solid var(--iros-banner-border);
   border-left: 3px solid var(--iros-banner-accent);
   background: var(--iros-banner-bg);
@@ -254,6 +254,7 @@ h2 {
 .iros-banner li ul { margin-top: .15rem; }
 .iros-banner li + li { margin-top: .45rem; }
 .iros-banner li li + li { margin-top: .15rem; }
+.iros-banner .iros-meta { white-space: nowrap; }
 .iros-banner li > a:not([class]) { color: var(--iros-link); }
 .iros-banner li > a:not([class]):hover { color: var(--iros-link-hover); }
 .iros-banner a.paper-orange { color: var(--orange-text); }
