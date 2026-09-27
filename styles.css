@@ -43,6 +43,12 @@
   --blue-text: #2e5ba3;
   --blue-venue: #4d6c99;
 
+  --iros-banner-bg: #fff8e6;
+  --iros-banner-border: #f0dca4;
+  --iros-banner-accent: #e2b43a;
+  --iros-link: #1a1a1a;
+  --iros-link-hover: #1a1a1a;
+
   --serif: "Source Serif 4", Georgia, serif;
   --sans: "Source Sans 3", Arial, sans-serif;
   --page: 1080px;
@@ -213,6 +219,47 @@ h2 {
   color: var(--notice-text);
   font-size: .92rem;
 }
+
+.iros-banner {
+  margin-top: 1.75rem;
+  padding: 1rem 1.15rem;
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  gap: 1.1rem;
+  align-items: center;
+  border: 1px solid var(--iros-banner-border);
+  border-left: 3px solid var(--iros-banner-accent);
+  background: var(--iros-banner-bg);
+}
+.iros-banner img {
+  width: 128px;
+  height: auto;
+  background: #fff;
+}
+.iros-banner p,
+.iros-banner li {
+  color: #1a1a1a;
+  font-size: .92rem;
+}
+.iros-banner p { margin: 0 0 .55rem; }
+.iros-banner .iros-group {
+  margin: .7rem 0 .25rem;
+  color: #1a1a1a;
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.iros-banner ul { margin: 0; padding-left: 1.1rem; }
+.iros-banner li ul { margin-top: .15rem; }
+.iros-banner li + li { margin-top: .45rem; }
+.iros-banner li li + li { margin-top: .15rem; }
+.iros-banner li > a:not([class]) { color: var(--iros-link); }
+.iros-banner li > a:not([class]):hover { color: var(--iros-link-hover); }
+.iros-banner a.paper-orange { color: var(--orange-text); }
+.iros-banner a.paper-orange:hover { color: var(--orange); }
+.iros-banner a.paper-purple { color: var(--purple-text); }
+.iros-banner a.paper-purple:hover { color: var(--purple); }
 
 .profile-news {
   margin-top: 2.5rem;
@@ -460,12 +507,22 @@ footer a:hover { text-decoration: underline; }
     --blue: #6d9ce8;
     --blue-text: #8fb3ec;
     --blue-venue: #9ab0d6;
+
+    --iros-banner-bg: #2a2418;
+    --iros-banner-border: #5a4a28;
+    --iros-banner-accent: #c9a227;
+    --iros-link: var(--ink);
+    --iros-link-hover: var(--ink);
   }
 
   .portrait,
   .publication-image img {
     filter: brightness(.92) saturate(.95);
   }
+
+  .iros-banner p,
+  .iros-banner li,
+  .iros-banner .iros-group { color: var(--ink); }
 }
 
 @media (max-width: 760px) {
@@ -490,6 +547,8 @@ footer a:hover { text-decoration: underline; }
   .profile-card h1 { font-size: 1.5rem; }
   .position { font-size: .82rem; }
   .contact-list { grid-column: 1 / -1; margin-top: 1rem; }
+  .iros-banner { grid-template-columns: 1fr; justify-items: start; }
+  .iros-banner img { width: 148px; }
   .news-list article { grid-template-columns: 1fr; gap: .15rem; }
   .publication-list::before { display: none; }
   .publication { grid-template-columns: 1fr; }
