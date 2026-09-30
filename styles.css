@@ -313,6 +313,8 @@ h2 {
 .news-list article:first-child { border-top: 1px solid var(--line); }
 .news-list time { color: var(--slate-700); font-size: .83rem; font-weight: 600; }
 .news-list p { margin: 0; font-size: .94rem; }
+.news-list .award-headline { font-size: 1.12rem; font-weight: 600; line-height: 1.45; }
+.news-list .award-headline .award-name { color: var(--slate-700); }
 .news-list article.news-extra { display: none; }
 .news-list.expanded article.news-extra { display: grid; }
 
@@ -414,6 +416,14 @@ h2 {
 }
 .award-note a { color: var(--slate-700); }
 .award-note + .award-note { margin-top: .15rem; }
+.award-note.award-won {
+  margin-top: 1rem;
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4;
+}
 
 .publication.accent-purple .venue { color: var(--purple-venue); }
 .publication.accent-orange .venue { color: var(--orange-venue); }
@@ -440,6 +450,7 @@ h2 {
 
 .publication.accent-purple .award-note,
 .publication.accent-purple .equal-note { color: var(--purple-venue); }
+.publication.accent-purple .award-note.award-won { color: var(--purple-text); }
 .publication.accent-orange .award-note,
 .publication.accent-orange .equal-note { color: var(--orange-venue); }
 .publication.accent-pink   .award-note,
