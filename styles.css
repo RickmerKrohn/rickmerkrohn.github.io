@@ -43,11 +43,11 @@
   --blue-text: #2e5ba3;
   --blue-venue: #4d6c99;
 
-  --iros-banner-bg: #fff8e6;
-  --iros-banner-border: #f0dca4;
-  --iros-banner-accent: #e2b43a;
-  --iros-link: #1a1a1a;
-  --iros-link-hover: #1a1a1a;
+  --corl-banner-bg: #fff5f5;
+  --corl-banner-border: #f3d0d4;
+  --corl-banner-accent: #f2737e;
+  --corl-link: #1a1a1a;
+  --corl-link-hover: #1a1a1a;
 
   --serif: "Source Serif 4", Georgia, serif;
   --sans: "Source Sans 3", Arial, sans-serif;
@@ -220,29 +220,33 @@ h2 {
   font-size: .92rem;
 }
 
-.iros-banner {
+.corl-banner {
   margin-top: 1.75rem;
   padding: 1rem 1.15rem;
   display: grid;
   grid-template-columns: 128px minmax(0, 1fr);
   gap: 1.1rem;
   align-items: start;
-  border: 1px solid var(--iros-banner-border);
-  border-left: 3px solid var(--iros-banner-accent);
-  background: var(--iros-banner-bg);
+  border: 1px solid var(--corl-banner-border);
+  border-left: 3px solid var(--corl-banner-accent);
+  background: var(--corl-banner-bg);
 }
-.iros-banner img {
+.corl-banner img {
   width: 128px;
-  height: auto;
-  background: #fff;
+  height: 128px;
+  max-width: 128px;
+  min-width: 0;
+  object-fit: cover;
+  border-radius: 50%;
+  justify-self: start;
 }
-.iros-banner p,
-.iros-banner li {
+.corl-banner p,
+.corl-banner li {
   color: #1a1a1a;
   font-size: .92rem;
 }
-.iros-banner p { margin: 0 0 .55rem; }
-.iros-banner .iros-group {
+.corl-banner p { margin: 0 0 .55rem; }
+.corl-banner .corl-group {
   margin: .7rem 0 .25rem;
   color: #1a1a1a;
   font-size: .75rem;
@@ -250,17 +254,17 @@ h2 {
   letter-spacing: .06em;
   text-transform: uppercase;
 }
-.iros-banner ul { margin: 0; padding-left: 1.1rem; }
-.iros-banner li ul { margin-top: .15rem; }
-.iros-banner li + li { margin-top: .45rem; }
-.iros-banner li li + li { margin-top: .15rem; }
-.iros-banner .iros-meta { white-space: nowrap; }
-.iros-banner li > a:not([class]) { color: var(--iros-link); }
-.iros-banner li > a:not([class]):hover { color: var(--iros-link-hover); }
-.iros-banner a.paper-orange { color: var(--orange-text); }
-.iros-banner a.paper-orange:hover { color: var(--orange); }
-.iros-banner a.paper-purple { color: var(--purple-text); }
-.iros-banner a.paper-purple:hover { color: var(--purple); }
+.corl-banner ul { margin: 0; padding-left: 1.1rem; }
+.corl-banner li ul { margin-top: .15rem; }
+.corl-banner li + li { margin-top: .45rem; }
+.corl-banner li li + li { margin-top: .15rem; }
+.corl-banner .corl-meta { white-space: nowrap; }
+.corl-banner li > a:not([class]) { color: var(--corl-link); }
+.corl-banner li > a:not([class]):hover { color: var(--corl-link-hover); }
+.corl-banner a.paper-orange { color: var(--orange-text); }
+.corl-banner a.paper-orange:hover { color: var(--orange); }
+.corl-banner a.paper-purple { color: var(--purple-text); }
+.corl-banner a.paper-purple:hover { color: var(--purple); }
 
 .profile-news {
   margin-top: 2.5rem;
@@ -520,11 +524,11 @@ footer a:hover { text-decoration: underline; }
     --blue-text: #8fb3ec;
     --blue-venue: #9ab0d6;
 
-    --iros-banner-bg: #2a2418;
-    --iros-banner-border: #5a4a28;
-    --iros-banner-accent: #c9a227;
-    --iros-link: var(--ink);
-    --iros-link-hover: var(--ink);
+    --corl-banner-bg: #2a1c20;
+    --corl-banner-border: #5c3a40;
+    --corl-banner-accent: #f2737e;
+    --corl-link: var(--ink);
+    --corl-link-hover: var(--ink);
   }
 
   .portrait,
@@ -532,9 +536,9 @@ footer a:hover { text-decoration: underline; }
     filter: brightness(.92) saturate(.95);
   }
 
-  .iros-banner p,
-  .iros-banner li,
-  .iros-banner .iros-group { color: var(--ink); }
+  .corl-banner p,
+  .corl-banner li,
+  .corl-banner .corl-group { color: var(--ink); }
 }
 
 @media (max-width: 760px) {
@@ -559,8 +563,8 @@ footer a:hover { text-decoration: underline; }
   .profile-card h1 { font-size: 1.5rem; }
   .position { font-size: .82rem; }
   .contact-list { grid-column: 1 / -1; margin-top: 1rem; }
-  .iros-banner { grid-template-columns: 1fr; justify-items: start; }
-  .iros-banner img { width: 148px; }
+  .corl-banner { grid-template-columns: 128px minmax(0, 1fr); }
+  .corl-banner img { width: 128px; height: 128px; max-width: 128px; }
   .news-list article { grid-template-columns: 1fr; gap: .15rem; }
   .publication-list::before { display: none; }
   .publication { grid-template-columns: 1fr; }
