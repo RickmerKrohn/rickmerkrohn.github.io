@@ -258,13 +258,15 @@ h2 {
 .corl-banner li ul { margin-top: .15rem; }
 .corl-banner li + li { margin-top: .45rem; }
 .corl-banner li li + li { margin-top: .15rem; }
-.corl-banner .corl-meta { white-space: nowrap; }
+.corl-banner .corl-meta { white-space: normal; }
 .corl-banner li > a:not([class]) { color: var(--corl-link); }
 .corl-banner li > a:not([class]):hover { color: var(--corl-link-hover); }
 .corl-banner a.paper-orange { color: var(--orange-text); }
 .corl-banner a.paper-orange:hover { color: var(--orange); }
 .corl-banner a.paper-purple { color: var(--purple-text); }
 .corl-banner a.paper-purple:hover { color: var(--purple); }
+.corl-banner a.paper-pink { color: var(--pink-text); }
+.corl-banner a.paper-pink:hover { color: var(--pink); }
 
 .profile-news {
   margin-top: 2.5rem;
@@ -563,8 +565,8 @@ footer a:hover { text-decoration: underline; }
   .profile-card h1 { font-size: 1.5rem; }
   .position { font-size: .82rem; }
   .contact-list { grid-column: 1 / -1; margin-top: 1rem; }
-  .corl-banner { grid-template-columns: 128px minmax(0, 1fr); }
-  .corl-banner img { width: 128px; height: 128px; max-width: 128px; }
+  .corl-banner { grid-template-columns: 72px minmax(0, 1fr); gap: .75rem; }
+  .corl-banner img { width: 72px; height: 72px; max-width: 72px; }
   .news-list article { grid-template-columns: 1fr; gap: .15rem; }
   .publication-list::before { display: none; }
   .publication { grid-template-columns: 1fr; }
